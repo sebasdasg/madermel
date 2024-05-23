@@ -3,8 +3,8 @@
 :root {
   --fuente: "Poppins", sans-serif;
 
-  --first-color: #e8b647;
-  --second-color: #0c1620;
+  --first-color: #FFD71F;
+  --second-color: #0D0039;
   --hover-color: #f7b941;
   --lilac-color: #dcdcf6;
   --white-color: #ffffff;
@@ -16,4 +16,6 @@
 
   --text-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
   --box-shadow: 0 5px 25px rgb(0 0 0 / 20%);
+
+  --separacion: 5rem;
 }

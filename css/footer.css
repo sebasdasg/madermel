@@ -1,3 +1,56 @@
 .footer{
     background-color: var(--second-color);
+    color: var(--white-color);
+}
+.contenedor-footer{
+    padding: 3rem 0;
+}
+.footer-about a img{
+    width: 20rem;
+}
+.footer-about p{
+    line-height: 1.75;
+    margin: 2rem 0;
+}
+.footer-about .footer-icon img{
+    width: 2.5rem;
+    margin-right: 1rem;
+}
+.footer-navegacion,
+.footer-servicios,
+.footer-contacto{
+    display: flex;
+    flex-direction: column;
+}
+.footer-navegacion h3,
+.footer-servicios h3,
+.footer-contacto h3{
+    margin: 2rem 0;
+    color: var(--first-color);
+    font-weight: 500;
+}
+.footer-navegacion a,
+.footer-servicios a{
+    color: var(--white-color);
+    font-size: 2rem;
+}
+.footer-contact-info{
+    display: flex;
+    margin-bottom: 2rem;
+}
+.footer-contact-info:last-child{
+    margin-bottom: 0;
+}
+.footer-contact-info img{
+    width: 1.8rem;
+    margin-right: 2rem;
+}
+.footer-contact-info p{
+    line-height: 1.6;
+}
+.copy_right{
+    border-top: 1px solid var(--first-color);
+    font-size: 1.2rem;
+    text-align: center;
+
 }

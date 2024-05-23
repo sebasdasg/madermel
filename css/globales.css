@@ -14,6 +14,11 @@ body {
   font-size: 1.6rem;
   line-height: 2;
 }
+.contenedor {
+  width: 95%;
+  max-width: 120rem;
+  margin: 0 auto;
+}
 a {
   text-decoration: none;
 }
@@ -39,3 +44,9 @@ ul {
   padding: 0;
   list-style: none;
 }
+
+/*Utilidades*/
+/*.seccion {
+  margin-top: calc(var(--separacion) / 2);
+  margin-bottom: calc(var(--separacion) / 2);
+}*/
