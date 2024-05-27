@@ -85,6 +85,40 @@
   .nav__link {
     font-size: 1.4rem;
     padding-bottom: 0;
+    font-weight: 500;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+    background-image: linear-gradient(
+      to right,
+      var(--first-color),
+      var(--first-color) 50%,
+      var(--white-color) 50%
+    );
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding: 3px 0;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.2 ease-in-out;
+  }
+  .nav__link::before {
+    content: "";
+    background: var(--first-color);
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    transition: all 0.2s ease-in-out;
+  }
+  .nav__link:hover {
+    background-position: 0;
+  }
+  .nav__link:hover::before {
+    width: 100%;
   }
   .nav__close {
     display: none;
@@ -94,6 +128,53 @@
   .nav__link {
     font-size: 1.8rem;
   }
+}
+/*info*/
+.nav__info{
+  background-color: var(--second-color);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: -100%;
+  height: 100vh;
+  color: var(--white-color);
+  text-align: center;
+  padding: 4rem 2rem;
+  box-shadow: -5px 0 10px rgba(0, 0, 0, 0.5);
+  transition: 0.5s ease;
+}
+.info__logo img{
+  margin-bottom: 5rem;
+}
+.info__content-item{
+  margin-bottom: 3rem;
+}
+.info__content-item i{
+  color: var(--first-color);
+  font-size: 2.5rem;
+}
+.info__content-item h2{
+  font-size: 2.2rem;
+  font-weight: 500;
+}
+.info__content-item p{
+  line-height: 1.5;
+}
+.info__content-item .fa-brands{
+  margin-right: 2rem;
+}
+.info__content-item .fa-brands:last-child{
+  margin-right: 0;
+}
+.nav__close-info{
+  color: var(--first-color);
+  font-size: 2.5rem;
+  position: absolute;
+  top: 2rem;
+  cursor: pointer;
+}
+.show-menu-info{
+  right: 0;
 }
 /*slider*/
 .slider {
@@ -166,11 +247,15 @@
   font-weight: 500;
   color: var(--second-color);
   background-color: var(--first-color);
-  display: inline-block;
   padding: 0.75rem 1.5rem;
   border-radius: 1rem;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   transition: 0.5s;
+}
+.button:hover{
+  color: var(--first-color);
+  background-color: var(--second-color);
 }
 .slider .list .item.active {
   opacity: 1;
@@ -201,46 +286,31 @@
 .slider .list .item.active .button {
   animation-duration: 1.3s;
 }
-.slider .list .item.active .button:hover {
-  background-color: var(--second-color);
-  color: var(--first-color);
-  border-radius: 1rem;
-}
 .button i {
   margin-left: 1rem;
 }
 .arrows {
-  position: absolute;
-  top: 55%;
-  right: 5rem;
-  z-index: 100;
+  display: none;
 }
-.arrows button {
-  background-color: var(--first-color);
-  border: none;
-  width: 4rem;
-  height: 4rem;
-  border-radius: 0.5rem;
-  font-size: x-large;
-  color: var(--second-color);
-  transition: 0.5s;
-}
-.arrows button:hover {
-  background-color: var(--second-color);
-  color: var(--first-color);
+.contenedor-thumbnail {
+  position: relative;
+  width: 95%;
+  max-width: 120rem;
+  margin: 0 auto;
+  height: 100%;
 }
 .thumbnail {
   position: absolute;
-  bottom: 3rem;
+  bottom: 2rem;
   z-index: 11;
   display: flex;
   gap: 1rem;
   width: 100%;
   height: 20rem;
-  padding: 0 5rem;
   box-sizing: border-box;
   overflow: auto;
-  justify-content: center;
+  justify-content: flex-end;
+  align-items: center;
 }
 .thumbnail::-webkit-scrollbar {
   width: 0;
@@ -270,18 +340,33 @@
   font-weight: 500;
 }
 @media (min-width: 768px) {
+  .nav__info{
+    width: 70%;
+  }
   .slider {
     height: 80vh;
   }
 }
 @media (min-width: 900px) {
+  .nav__info{
+    width: 50%;
+  }
   .slider .list .item .content {
     top: 30%;
   }
 }
-@media (min-width: 1300px) {
-  .arrows {
-    right: 15%;
+@media (min-width: 1024px) {
+  .nav__info{
+    width: auto;
+  }
+}
+@media (min-width: 651px) {
+  .thumbnail {
+    height: 13rem;
+  }
+  .item__thumbnail {
+    width: 10rem;
+    height: 12rem;
   }
 }
 @media (min-width: 1500px) {
@@ -292,10 +377,10 @@
 @media (max-width: 650px) {
   .thumbnail {
     bottom: 1.5rem;
-    height: 14rem;
+    height: 12rem;
   }
   .item__thumbnail {
-    width: 10rem;
-    height: 12rem;
+    width: 8rem;
+    height: 10rem;
   }
 }

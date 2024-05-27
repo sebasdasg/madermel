@@ -24,6 +24,23 @@ document.addEventListener("DOMContentLoaded", function () {
           navMenu.classList.remove("show-menu");
         });
       }
+      /*==========DHOW MENU INFO============*/
+      const navInfo = document.getElementById('nav-info'),
+        infoIcon = document.getElementById('nav-info-icon'),
+        infoClose = document.getElementById('nav-close-info');
+        /*===MENU INFO===*/
+        if(infoIcon) {
+          infoIcon.addEventListener("click", () => {
+            navInfo.classList.add("show-menu-info");
+          });
+        }
+        /*===MENU INFO - CLOSE===*/
+        if(infoClose){
+          infoClose.addEventListener("click", () => {
+            navInfo.classList.remove("show-menu-info");
+          });
+        }
+
       let items = document.querySelectorAll(".slider .list .item");
       let next = document.getElementById("next");
       let prev = document.getElementById("prev");
@@ -50,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
       //auto ruun slider
       let refreshInterval = setInterval(() => {
         next.click();
-      }, 20000);
+      }, 8000);
       function showSlider() {
         //remove item active old
         let itemActiveOld = document.querySelector(
@@ -70,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
         clearInterval(refreshInterval);
         refreshInterval = setInterval(() => {
           next.click();
-        }, 25000);
+        }, 10000);
       }
       //click thumbnail
       thumbnails.forEach((thumbnail, index) => {
