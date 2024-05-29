@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (navToggle) {
         navToggle.addEventListener("click", () => {
           navMenu.classList.add("show-menu");
+          document.body.classList.add("no-scroll");
         });
       }
       /*===== MENU HIDDEN =====*/
@@ -22,6 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (navClose) {
         navClose.addEventListener("click", () => {
           navMenu.classList.remove("show-menu");
+          document.body.classList.remove("no-scroll");
         });
       }
       /*==========DHOW MENU INFO============*/
@@ -32,12 +34,14 @@ document.addEventListener("DOMContentLoaded", function () {
         if(infoIcon) {
           infoIcon.addEventListener("click", () => {
             navInfo.classList.add("show-menu-info");
+            document.body.classList.add("no-scroll");
           });
         }
         /*===MENU INFO - CLOSE===*/
         if(infoClose){
           infoClose.addEventListener("click", () => {
             navInfo.classList.remove("show-menu-info");
+            document.body.classList.remove("no-scroll");
           });
         }
 
@@ -87,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
         clearInterval(refreshInterval);
         refreshInterval = setInterval(() => {
           next.click();
-        }, 10000);
+        }, 8000);
       }
       //click thumbnail
       thumbnails.forEach((thumbnail, index) => {
