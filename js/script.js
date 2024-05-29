@@ -7,3 +7,6 @@ function cargarFragmento(idContenedor, rutaHTML) {
 }
 //CARGAR FOOTER
 cargarFragmento("footerPlaceholder", "/components/footer.html");
+
+//CARGAR SLIDER
+cargarFragmento("sliderPlaceholder", "/components/slider.html");
