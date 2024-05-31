@@ -1,3 +1,10 @@
+document.addEventListener('DOMContentLoaded', function(){
+  
+  //CARGAR FOOTER
+cargarFragmento("footerPlaceholder", "/components/footer.html");
+
+})
+
 function cargarFragmento(idContenedor, rutaHTML) {
   fetch(rutaHTML)
     .then((response) => response.text())
@@ -5,8 +12,11 @@ function cargarFragmento(idContenedor, rutaHTML) {
       document.getElementById(idContenedor).innerHTML = html;
     });
 }
-//CARGAR FOOTER
-cargarFragmento("footerPlaceholder", "/components/footer.html");
-
-//CARGAR SLIDER
-cargarFragmento("sliderPlaceholder", "/components/slider.html");
+window.addEventListener("scroll", function(){
+  const header = this.document.querySelector(".header");
+  const logo = this.document.querySelector(".contenedor-header");
+  
+  header.classList.toggle("sticky", this.window.scrollY > 0);
+  logo.classList.toggle("sticky", this.window.scrollY > 0);
+ 
+});

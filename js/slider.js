@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
+  //fijar menu
+  //navegacionFija();
   fetch("/components/slider.html")
     .then((response) => response.text())
     .then((data) => {
@@ -61,3 +63,14 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
 });
+/*
+function navegacionFija(){
+  const header = document.querySelector(".header");
+  const sobreSlider = document.querySelector(".sliderPlaceholder");
+
+  window.addEventListener('scroll', function(){
+    console.log(sobreSlider.getBoundingClientRect().bottom);
+  });
+
+}
+*/
