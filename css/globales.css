@@ -15,7 +15,7 @@ body {
   line-height: 2;
 }
 .contenedor {
-  width: 95%;
+  width: 90%;
   max-width: 120rem;
   margin: 0 auto;
 }
@@ -46,7 +46,6 @@ ul {
 }
 
 /*Utilidades*/
-/*.seccion {
-  margin-top: calc(var(--separacion) / 2);
-  margin-bottom: calc(var(--separacion) / 2);
-}*/
+.seccion {
+  padding: 5rem 0;
+}
