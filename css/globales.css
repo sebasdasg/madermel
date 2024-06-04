@@ -49,3 +49,6 @@ ul {
 .seccion {
   padding: 5rem 0;
 }
+.no-padding{
+  padding: 0;
+}
