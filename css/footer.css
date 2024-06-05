@@ -2,8 +2,11 @@
   background-color: var(--second-color);
   color: var(--white-color);
 }
+.footer.seccion {
+  padding-bottom: 0;
+}
 .contenedor-footer {
-  padding: 3rem 0;
+  padding-bottom: 3rem;
 }
 .footer-about a img {
   width: 22.5rem;
