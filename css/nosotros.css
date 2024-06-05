@@ -1,0 +1,83 @@
+.page__nosotros{
+    background-color: var(--second-color);
+}
+.quienes-somos-contenido{
+    color: var(--white-color);
+    margin-bottom: 3rem;
+}
+.quienes-somos-contenido img{
+    width: 100%;
+    margin-bottom: 2rem;
+}
+.quienes-somos-contenido p{
+    text-align: justify;
+    line-height: 1.5;
+}
+.quienes-somos__valores{
+    border-radius: 1rem;
+    border: 1px solid var(--first-color);
+    text-align: center;
+    padding: 2rem;
+}
+.quienes-somos__valores h3{
+    color: var(--first-color);
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 3rem;
+}
+.quienes-somos__box{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1.5rem));
+    justify-content: center;
+    gap: 2rem;
+}
+.quienes-somos__valore-box i{
+    color: var(--first-color);
+    font-size: 3rem;
+}
+.quienes-somos__valore-box p{
+    color: var(--white-color);
+}
+.propositos{
+    background-color: var(--container-ligth-color);
+}
+.proposito__item img{
+    width: 18rem;
+    display: block;
+    margin: auto;
+}
+.proposito__item-descripcion{
+    margin: 3rem 0;
+}
+.proposito__item-descripcion h3{
+    display: inline-block;
+    color: var(--second-color);
+    padding: 0 1rem .5rem 0;
+    border-bottom: 3px solid var(--first-color);
+    margin-bottom: 2rem;
+}
+.proposito__item-descripcion p{
+    color: var(--second-color);
+    line-height: 1.5;
+    text-align: justify;
+}
+@media (min-width: 768px) {
+    .proposito__item{
+        display: flex;
+    }
+    .proposito__item-descripcion{
+        margin-left: 3rem;
+    }
+}
+@media (min-width: 1024px) {
+    .quienes-somos-contenido{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+    }
+    .propositos .contenedor{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+    }
+}
